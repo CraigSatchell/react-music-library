@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './musicTable.css';
 
 export default class MusicTable extends Component {
    constructor() {
@@ -29,8 +30,8 @@ export default class MusicTable extends Component {
 
    render() {
       return (
-         <div>
-            <h1>Music Table Component...</h1>
+         <div className='music-table'>
+            <h3>Music Table Component...</h3>
          </div>
       )
    }
