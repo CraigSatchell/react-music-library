@@ -11,6 +11,7 @@ export default class App extends Component {
     this.state = {
       music: []
     };
+    this.filterMusic = null;
 
     this.filterByAlbum = this.filterByAlbum.bind(this);
     this.filterByArtist = this.filterByArtist.bind(this);
@@ -18,37 +19,38 @@ export default class App extends Component {
 
   }
 
-     // TODO: Filter by album
-     filterByAlbum() {
 
-    }
- 
- 
-    // TODO: Filter by genre
-    filterByGenre() {
- 
- 
-    }
- 
-    // TODO. Filter by artist
-    filterByArtist() {
- 
-    }
- 
+
+  // TODO: Filter by album
+  filterByAlbum() {
+  }
+
+
+  // TODO: Filter by genre
+  filterByGenre() {
+
+
+  }
+
+  // TODO. Filter by artist
+  filterByArtist() {
+
+  }
+
 
   componentDidMount() {
     try {
       axios.get('http://www.devcodecampmusiclibrary.com/api/music')
-      .then(response => this.setState({
-        music: response.data
-      }));
-      console.log(this.state);
+        .then(response => this.setState({
+          music: response.data
+        }));
     } catch (e) {
       console.log(e);
     }
   }
 
   render() {
+
     return (
       <div className='container'>
         <div className="header">
@@ -57,7 +59,7 @@ export default class App extends Component {
 
         <div className="contents">
           <SearchBar />
-          <MusicTable music={this.state.music} />
+          {this.state.music ? <MusicTable music={this.state.music} /> : <p>Loading...</p>}
         </div>
 
         <div className="footer">
