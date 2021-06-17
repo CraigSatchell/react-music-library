@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import SearchBar from '../SearchBar/searchBar';
 import './musicTable.css';
 //import { uniqueItem } from '../../helper'
 
@@ -19,6 +20,7 @@ export default class MusicTable extends Component {
 
       return (
          <div className='music-table'>
+            <SearchBar />
             <h3>Library Listing</h3>
             <table>
                <thead>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import NavigatorBar from './components/NavigatorBar/navigatorBar';
-import SearchBar from './components/SearchBar/searchBar';
 import MusicTable from './components/MusicTable/musicTable';
 import './App.css';
 import axios from 'axios';
@@ -43,6 +42,24 @@ export default class App extends Component {
 
   }
 
+  // Handle search submit
+  handleSearchSubmit(event) {
+    event.preventDefault();
+
+  }
+
+  // Handle search change
+  handleSearchChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+
+  handleSearchFilter(event) {
+
+  }
+
 
   componentDidMount() {
     try {
@@ -65,9 +82,8 @@ export default class App extends Component {
         </div>
 
         <div className="contents">
-          <SearchBar />
           {this.state.music ? <MusicTable music={this.state.music} /> : <p>Loading...</p>}
-          {this.state.music ? console.log(this.filterByAlbum('rubber')) : <p>Loading...</p>}
+          {/*this.state.music ? console.log(this.filterByAlbum('rubber')) : <p>Loading...</p>*/}
         </div>
 
         <div className="footer">
