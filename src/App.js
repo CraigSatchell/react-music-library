@@ -9,7 +9,8 @@ export default class App extends Component {
     super()
     this.state = {
       music: [],
-      searchBar: ''
+      searchBox: '',
+      searchFilter: ''
     };
 
     this.filterMusic = null;
@@ -17,6 +18,11 @@ export default class App extends Component {
     this.filterByAlbum = this.filterByAlbum.bind(this);
     this.filterByArtist = this.filterByArtist.bind(this);
     this.filterByGenre = this.filterByGenre.bind(this);
+    this.filterByTitle = this.filterByTitle.bind(this);
+    this.filterByReleaseDate = this.filterByReleaseDate.bind(this);
+
+    this.handleSearchChange = this.handleSearchChange.bind(this);
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
 
   }
 
@@ -61,7 +67,7 @@ export default class App extends Component {
   // Handle search submit
   handleSearchSubmit(event) {
     event.preventDefault();
-
+    console.log(this.state);
   }
 
   // Handle search change
@@ -70,12 +76,7 @@ export default class App extends Component {
       [event.target.name]: event.target.value
     })
   }
-
-
-  handleSearchFilter(event) {
-
-  }
-
+  
 
   componentDidMount() {
     try {
@@ -98,7 +99,7 @@ export default class App extends Component {
         </div>
 
         <div className="contents">
-          {this.state.music ? <MusicTable music={this.state.music} filterArtist={this.filterByArtist} filterAlbum={this.filterByAlbum} filterGenre={this.filterByGenre} filterTitle={this.filterByTitle} filterReleaseDate={this.filterByReleaseDate} handleSearchFilter={this.handleSearchFilter} handleSearchSubmit={this.handleSearchSubmit} handleSearchChange={this.handleSearchChange} /> : <p>Loading...</p>}
+          {this.state.music ? <MusicTable music={this.state.music} searchBox={this.state.searchBox} searchFilter={this.state.searchFilter} filterArtist={this.filterByArtist} filterAlbum={this.filterByAlbum} filterGenre={this.filterByGenre} filterTitle={this.filterByTitle} filterReleaseDate={this.filterByReleaseDate} handleSearchSubmit={this.handleSearchSubmit} handleSearchChange={this.handleSearchChange} /> : <p>Loading...</p>}
           {/*this.state.music ? console.log(this.filterByAlbum('rubber')) : <p>Loading...</p>*/}
         </div>
 
