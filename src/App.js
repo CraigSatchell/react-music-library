@@ -22,8 +22,8 @@ export default class App extends Component {
     this.filterByTitle = this.filterByTitle.bind(this);
     this.filterByReleaseDate = this.filterByReleaseDate.bind(this);
 
-    this.handleSearchChange = this.handleSearchChange.bind(this);
-    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
+    this.handlerSearchChange = this.handlerSearchChange.bind(this);
+    this.handlerSearchSubmit = this.handlerSearchSubmit.bind(this);
 
   }
 
@@ -66,13 +66,13 @@ export default class App extends Component {
 
 
   // Handle search submit
-  handleSearchSubmit(event) {
+  handlerSearchSubmit(event) {
     event.preventDefault();
     console.log(this.state);
   }
 
   // Handle search change
-  handleSearchChange(event) {
+  handlerSearchChange(event) {
     this.setState({
       [event.target.name]: event.target.value
     })
@@ -100,8 +100,8 @@ export default class App extends Component {
         </div>
 
         <div className="contents">
-          <SearchBar searchBox={this.state.searchBox} searchFilter={this.state.searchFilter} />
-          {this.state.music ? <MusicTable music={this.state.music}  filterArtist={this.filterByArtist} filterAlbum={this.filterByAlbum} filterGenre={this.filterByGenre} filterTitle={this.filterByTitle} filterReleaseDate={this.filterByReleaseDate} handleSearchSubmit={this.handleSearchSubmit} handleSearchChange={this.handleSearchChange} /> : <p>Loading...</p>}
+          <SearchBar searchBox={this.state.searchBox} searchFilter={this.state.searchFilter} handlerSearchChange={this.handlerSearchChange} handlerSearchSubmt={this.handlerSearchSubmit} />
+          {this.state.music ? <MusicTable music={this.state.music} /> : <p>Loading...</p>}
           {/*this.state.music ? console.log(this.filterByAlbum('rubber')) : <p>Loading...</p>*/}
         </div>
 

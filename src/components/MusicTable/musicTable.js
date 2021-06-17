@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SearchBar from '../SearchBar/searchBar';
 import './musicTable.css';
 //import { uniqueItem } from '../../helper'
 
