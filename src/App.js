@@ -42,6 +42,22 @@ export default class App extends Component {
 
   }
 
+  // Filter by artist
+  filterByTitle(searchFor) {
+    let matchedSongs = this.state.music.filter((song) => { return song.title.toLowerCase().includes(searchFor) });
+    return matchedSongs;
+
+  }
+
+
+  // Filter by release date
+  filterByReleaseDate(searchFor) {
+    let matchedSongs = this.state.music.filter((song) => { return song.releaseDate.toLowerCase().includes(searchFor) });
+    return matchedSongs;
+
+  }
+
+
   // Handle search submit
   handleSearchSubmit(event) {
     event.preventDefault();
@@ -82,7 +98,7 @@ export default class App extends Component {
         </div>
 
         <div className="contents">
-          {this.state.music ? <MusicTable music={this.state.music} /> : <p>Loading...</p>}
+          {this.state.music ? <MusicTable music={this.state.music} filterArtist={this.filterByArtist} filterAlbum={this.filterByAlbum} filterGenre={this.filterByGenre} filterTitle={this.filterByTitle} filterReleaseDate={this.filterByReleaseDate} handleSearchFilter={this.handleSearchFilter} handleSearchSubmit={this.handleSearchSubmit} handleSearchChange={this.handleSearchChange} /> : <p>Loading...</p>}
           {/*this.state.music ? console.log(this.filterByAlbum('rubber')) : <p>Loading...</p>*/}
         </div>
 
