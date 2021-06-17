@@ -16,7 +16,6 @@ export default class SearchBar extends Component {
                      <option value="genre">Genre</option>
                      <option value="title">Title</option>
                      <option value="releaseDate">Release Date</option>
-
                   </select>
                   <input type="submit" name="Go" value="Search"></input>
                </form>
