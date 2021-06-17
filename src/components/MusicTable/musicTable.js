@@ -12,7 +12,7 @@ const MusicTable = (props) => {
 
    return (
       <div className='music-table'>
-         <SearchBar />
+         <SearchBar searchBox={props.searchBox} searchFilter={props.searchFilter}/>
          <h3>Library Listing</h3>
          <table>
             <thead>

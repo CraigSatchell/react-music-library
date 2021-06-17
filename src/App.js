@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import NavigatorBar from './components/NavigatorBar/navigatorBar';
 import MusicTable from './components/MusicTable/musicTable';
+
 import './App.css';
 import axios from 'axios';
 
