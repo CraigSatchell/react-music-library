@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import NavigatorBar from './components/NavigatorBar/navigatorBar';
 import MusicTable from './components/MusicTable/musicTable';
+import SearchBar from './components/SearchBar/searchBar';
 import './App.css';
 import axios from 'axios';
 
@@ -99,7 +100,8 @@ export default class App extends Component {
         </div>
 
         <div className="contents">
-          {this.state.music ? <MusicTable music={this.state.music} searchBox={this.state.searchBox} searchFilter={this.state.searchFilter} filterArtist={this.filterByArtist} filterAlbum={this.filterByAlbum} filterGenre={this.filterByGenre} filterTitle={this.filterByTitle} filterReleaseDate={this.filterByReleaseDate} handleSearchSubmit={this.handleSearchSubmit} handleSearchChange={this.handleSearchChange} /> : <p>Loading...</p>}
+          <SearchBar searchBox={this.state.searchBox} searchFilter={this.state.searchFilter} />
+          {this.state.music ? <MusicTable music={this.state.music}  filterArtist={this.filterByArtist} filterAlbum={this.filterByAlbum} filterGenre={this.filterByGenre} filterTitle={this.filterByTitle} filterReleaseDate={this.filterByReleaseDate} handleSearchSubmit={this.handleSearchSubmit} handleSearchChange={this.handleSearchChange} /> : <p>Loading...</p>}
           {/*this.state.music ? console.log(this.filterByAlbum('rubber')) : <p>Loading...</p>*/}
         </div>
 
