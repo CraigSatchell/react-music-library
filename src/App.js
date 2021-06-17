@@ -9,8 +9,10 @@ export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      music: []
+      music: [],
+      searchBar: ''
     };
+
     this.filterMusic = null;
 
     this.filterByAlbum = this.filterByAlbum.bind(this);
@@ -21,19 +23,23 @@ export default class App extends Component {
 
 
 
-  // TODO: Filter by album
-  filterByAlbum() {
+  // Filter by album
+  filterByAlbum(searchFor) {
+    let matchedSongs = this.state.music.filter((song) => { return song.album.toLowerCase().includes(searchFor) });
+    return matchedSongs;
   }
 
 
-  // TODO: Filter by genre
-  filterByGenre() {
-
-
+  // Filter by genre
+  filterByGenre(searchFor) {
+    let matchedSongs = this.state.music.filter((song) => { return song.genre.toLowerCase().includes(searchFor) });
+    return matchedSongs;
   }
 
-  // TODO. Filter by artist
-  filterByArtist() {
+  // Filter by artist
+  filterByArtist(searchFor) {
+    let matchedSongs = this.state.music.filter((song) => { return song.artist.toLowerCase().includes(searchFor) });
+    return matchedSongs;
 
   }
 
@@ -47,6 +53,7 @@ export default class App extends Component {
     } catch (e) {
       console.log(e);
     }
+    this.filterByAlbum('rubber');
   }
 
   render() {
@@ -60,6 +67,7 @@ export default class App extends Component {
         <div className="contents">
           <SearchBar />
           {this.state.music ? <MusicTable music={this.state.music} /> : <p>Loading...</p>}
+          {this.state.music ? console.log(this.filterByAlbum('rubber')) : <p>Loading...</p>}
         </div>
 
         <div className="footer">

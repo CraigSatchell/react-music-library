@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './musicTable.css';
-import { unique } from '../../helper'
+//import { uniqueItem } from '../../helper'
 
 export default class MusicTable extends Component {
    render() {

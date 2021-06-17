@@ -1,24 +1,38 @@
 .search-bar {
-   margin: 75px 0 0 10px;
+   margin: 0 auto;
+   /*margin: 75px 0 0 10px;*/
+   margin-top: 150px;
+   width:500px;
    text-align: center;
    font-size: 1.1em;
 
 }
 
 
-.search-bar input[type=text]{
+.search-bar input[type=text] {
    width: 250px;
    padding: 5px 5px 5px 10px;
    outline: none;
    border-radius: 15px 0 0 15px;
    border-color: rgb(76, 21, 128);
    color:rgb(76, 21, 128);
+   margin-right: 1px;
+   border-width: 3px;
+}
+
+.search-bar select {
+   width: 100px;
+   padding: 5px;
+   outline: none;
+   border-color: rgb(76, 21, 128);
+   color:rgb(76, 21, 128);
    margin-right: 2px;
    border-width: 3px;
 }
 
+
 .search-bar input[type=submit]{
-   padding: 6px 10px 7px 10px;
+   padding: 6px 10px 9px 10px;
    background-color: rgb(76, 21, 128);
    color: #cccccc;
    font-size: .9em;

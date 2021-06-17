@@ -1,4 +1,4 @@
-export const unique = (value, index, self) => {
+export const uniqueItem = (value, index, self) => {
    return self.indexOf(value) === index
  }
  
