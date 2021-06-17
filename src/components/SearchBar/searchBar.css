@@ -1,3 +1,9 @@
 .search-bar {
-   margin: 100px 0 0 10px;
+   margin: 75px 0 0 10px;
+   text-align: center;
+}
+
+
+.search-bar input[type=text]{
+   width: 250px;
 }

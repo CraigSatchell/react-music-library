@@ -5,7 +5,13 @@ export default class SearchBar extends Component {
    render() {
       return (
          <div className='search-bar'>
-            <h3>Search Bar Component...</h3>
+            <div>
+               <form>
+                  <label htmlFor="search"></label>
+                  <input type="text" name='search' value='' placeholder='Title, Album, Artist...'></input>
+                  <input type="submit" name="Go" value=" Go "></input>
+               </form>
+            </div>
          </div>
       )
    }

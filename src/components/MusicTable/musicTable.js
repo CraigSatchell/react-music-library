@@ -31,7 +31,26 @@ export default class MusicTable extends Component {
    render() {
       return (
          <div className='music-table'>
-            <h3>Music Table Component...</h3>
+            <h3>Library Listing</h3>
+            <table>
+            <tr>
+               <th>Title</th><th>Album</th><th>Artist</th><th>Genre</th><th>Release Date</th>
+               </tr>
+               <tr>
+                  <td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+               </tr>
+               <tr>
+                  <td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+               </tr>
+               <tr>
+                  <td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+               </tr>
+               <tr>
+                  <td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
+               </tr>
+            
+         </table>
+
          </div>
       )
    }
