@@ -2,54 +2,26 @@ import React, { Component } from 'react'
 import './musicTable.css';
 
 export default class MusicTable extends Component {
-   constructor() {
-      super()
-      this.filterByAlbum = this.filterByAlbum.bind(this);
-      this.filterByArtist = this.filterByArtist.bind(this);
-      this.filterByGenre = this.filterByGenre.bind(this);
-   }
-
-
-   // TODO: Filter by album
-   filterByAlbum(){
-      
-   }
-
-
-   // TODO: Filter by genre
-   filterByGenre(){
-
-      
-   }
-
-   // TODO. Filter by artist
-   filterByArtist(){
-      
-   }
-
-
    render() {
+      console.log(this.props.music)
+      const tableRows = this.props.music.map((song) => {
+         return <tr key={song.id}><td>{song.title}</td><td>{song.album}</td><td>{song.artist}</td><td>{song.genre}</td><td>{song.releaseDate}</td>
+         </tr>
+      })
+      console.log('rows:', tableRows)
       return (
          <div className='music-table'>
             <h3>Library Listing</h3>
             <table>
-            <tr>
-               <th>Title</th><th>Album</th><th>Artist</th><th>Genre</th><th>Release Date</th>
-               </tr>
-               <tr>
-                  <td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-               </tr>
-               <tr>
-                  <td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-               </tr>
-               <tr>
-                  <td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-               </tr>
-               <tr>
-                  <td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-               </tr>
-            
-         </table>
+               <thead>
+                  <tr>
+                     <th>Title</th><th>Album</th><th>Artist</th><th>Genre</th><th>Release Date</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {tableRows}
+               </tbody>
+            </table>
 
          </div>
       )

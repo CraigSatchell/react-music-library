@@ -9,7 +9,7 @@ export default class SearchBar extends Component {
                <form>
                   <label htmlFor="search"></label>
                   <input type="text" name='search' value='' placeholder='Title, Album, Artist...'></input>
-                  <input type="submit" name="Go" value=" Go "></input>
+                  <input type="submit" name="Go" value=" Search "></input>
                </form>
             </div>
          </div>

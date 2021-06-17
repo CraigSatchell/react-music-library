@@ -1,9 +1,32 @@
 .search-bar {
    margin: 75px 0 0 10px;
    text-align: center;
+   font-size: 1.1em;
+
 }
 
 
 .search-bar input[type=text]{
    width: 250px;
+   padding: 5px 5px 5px 10px;
+   outline: none;
+   border-radius: 15px 0 0 15px;
+   border-color: rgb(76, 21, 128);
+   color:rgb(76, 21, 128);
+   margin-right: 2px;
+   border-width: 3px;
+}
+
+.search-bar input[type=submit]{
+   padding: 6px 10px 7px 10px;
+   background-color: rgb(76, 21, 128);
+   color: #cccccc;
+   font-size: .9em;
+   border-radius: 0 15px 15px 0;
+   border: none;
+}
+
+.search-bar input[type=submit]:hover{
+   font-weight: bold;
+   color: #ffffff;
 }
