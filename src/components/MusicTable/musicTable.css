@@ -1,5 +1,6 @@
 .music-table {
    margin: 75px 50px 100px 50px;
+   min-width: 575px;
    border-radius: 7px;
    border: 1px solid #999999;
    box-shadow: 3px 3px 7px #999999;
