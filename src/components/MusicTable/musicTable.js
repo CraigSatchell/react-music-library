@@ -11,7 +11,7 @@ const MusicTable = (props) => {
 
    return (
       <div className='music-table'>
-         <h3>Library Listing</h3>
+         <h3>Library</h3>
          <table>
             <thead>
                <tr>

@@ -1,7 +1,17 @@
 .music-table {
    margin: 75px 50px 100px 50px;
+   border-radius: 7px;
+   border: 1px solid #999999;
+   box-shadow: 3px 3px 7px #999999;
 }
 
+.music-table h3 {
+  padding: 10px;
+  background-color: rgb(76, 21, 128);
+  color: #d2aada;
+  border-radius: 7px 7px 0 0;
+
+}
 
 .music-table table {
    font-family: arial, sans-serif;

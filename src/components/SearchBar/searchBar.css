@@ -6,6 +6,7 @@
   width: 500px;
   text-align: center;
   font-size: 1.1em;
+
 }
 
 .search-bar input[type='text'] {
@@ -27,6 +28,8 @@
   color: rgb(76, 21, 128);
   margin-right: 2px;
   border-width: 3px;
+  border-radius: 0 15px 15px 0;
+
 }
 
 .search-bar input[type='submit'] {
