@@ -5,10 +5,9 @@ const SearchBar = (props) => {
       return (
          <div className='search-bar'>
             <div>
-               <form onSubmit={(event) => props.handleSearchSubmit(event)}>
                   <label htmlFor="search"></label>
-                  <input type="text" name='searchFor' onChange={props.handleSearchChange} value={props.searchBox} placeholder='Title, Album, Artist...'></input>
-                  <select id="filter" onChange={props.handleSearchChange} name="filter" value={props.searchFilter}>
+                  <input type="text" name='searchFor' onChange={props.handleSearchBoxChange} value={props.searchBox} placeholder='Title, Album, Artist...'></input>
+                  <select id="filter" onChange={props.handleSearchFilterChange} name="filter" value={props.searchFilter}>
                      <option value="all">filter by. . .</option>
                      <option value="album">Album</option>
                      <option value="artist">Artist</option>
@@ -17,8 +16,6 @@ const SearchBar = (props) => {
                      <option value="releaseDate">Release Date</option>
 
                   </select>
-                  <input type="submit" name="Go" value="Search"></input>
-               </form>
             </div>
          </div>
       )

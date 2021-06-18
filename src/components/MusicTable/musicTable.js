@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBar from '../SearchBar/searchBar';
 import './musicTable.css';
 //import { uniqueItem } from '../../helper'
 
@@ -12,7 +11,6 @@ const MusicTable = (props) => {
 
    return (
       <div className='music-table'>
-         <SearchBar searchBox={props.searchBox} searchFilter={props.searchFilter}/>
          <h3>Library Listing</h3>
          <table>
             <thead>
