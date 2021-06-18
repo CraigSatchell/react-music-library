@@ -3,7 +3,14 @@
   margin: 100px 50px;
   border-radius: 5px;
   border: 1px solid #666666;
-  padding: 5px;
+  padding: 2px;
+  background-color: #3c1d42;
+  box-sizing: border-box;
+}
+
+.music-table h3 {
+  padding: 10px;
+  color: #d2aada;
 }
 
 .music-table table {
@@ -12,6 +19,9 @@
   width: 100%;
 }
 
+thead {
+  padding: 10px;
+}
 tr th {
   color: #000000;
 }
@@ -20,7 +30,7 @@ td,
 th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 7px;
 }
 
 tr:nth-child(even) {

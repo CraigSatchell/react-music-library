@@ -13,8 +13,8 @@
   padding: 6px 6px 6px 10px;
   outline: none;
   border-radius: 15px 0 0 15px;
-  border-color: rgb(76, 21, 128);
-  color: rgb(76, 21, 128);
+  border-color: #3c1d42;
+  color: #3c1d42;
   margin-right: 1px;
   border-width: 3px;
 }
@@ -23,16 +23,25 @@
   width: 100px;
   padding: 5px;
   outline: none;
-  border-color: rgb(76, 21, 128);
-  color: rgb(76, 21, 128);
+  border-color: #3c1d42;
+  color: #3c1d42;
+  background-color:#d2aada;
   margin-right: 2px;
   border-width: 3px;
 }
 
+.search-bar option:hover {
+  background-color: #3c1d42;
+}
+
+.search-bar .select-option:hover {
+  background-color: #000000;
+}
+
 .search-bar input[type='submit'] {
   padding: 6px 10px 9px 10px;
-  background-color: rgb(76, 21, 128);
-  color: #cccccc;
+  background-color: #3c1d42;
+  color: #d2aada;
   font-size: 0.9em;
   border-radius: 0 15px 15px 0;
   border: none;

@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar/searchBar';
 import './App.css';
 import axios from 'axios';
 
-export default class App extends Component {
+class App extends Component {
   constructor() {
     super()
     this.state = {
@@ -110,3 +110,5 @@ export default class App extends Component {
     )
   }
 }
+
+export default App;

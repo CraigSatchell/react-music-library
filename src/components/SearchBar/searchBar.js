@@ -1,7 +1,17 @@
 import React, { Component } from 'react'
 import './searchBar.css'
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
+   constructor(props) {
+      super(props);
+      this.state = {};
+      //const searchData = {};
+}
+
+   componentDidMount() {
+      console.log(this.props.searchBox);
+      
+   }
    render() {
       return (
          <div className='search-bar'>
@@ -10,12 +20,12 @@ export default class SearchBar extends Component {
                   <label htmlFor="search"></label>
                   <input type="text" name='searchFor' onChange={this.props.handlerSearchChange} value={this.props.searchBox} placeholder='Title, Album, Artist...'></input>
                   <select id="filter" onChange={this.props.handlerSearchChange} name="filter" value={this.props.searchFilter}>
-                     <option value="all">filter by. . .</option>
-                     <option value="album">Album</option>
-                     <option value="artist">Artist</option>
-                     <option value="genre">Genre</option>
-                     <option value="title">Title</option>
-                     <option value="releaseDate">Release Date</option>
+                     <option className="select-option" value="all">filter by. . .</option>
+                     <option className="select-option" value="album">Album</option>
+                     <option className="select-option" value="artist">Artist</option>
+                     <option className="select-option" value="genre">Genre</option>
+                     <option className="select-option" value="title">Title</option>
+                     <option className="select-option" value="releaseDate">Release Date</option>
                   </select>
                   <input type="submit" name="Go" value="Search"></input>
                </form>
@@ -24,3 +34,5 @@ export default class SearchBar extends Component {
       )
    }
 }
+
+export default SearchBar;
