@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './navigatorBar';
 
 export default class NavigatorBar extends Component {
    render() {

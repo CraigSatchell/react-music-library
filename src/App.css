@@ -1,5 +1,10 @@
 .header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
    background-color: rgb(76, 21, 128);
    color: #d2aada;
    padding: 10px;
+   z-index: 9999;
 }
