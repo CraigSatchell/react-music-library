@@ -31,7 +31,7 @@ const App = () => {
 
     useEffect(() => {
         getMusicData()
-    }, [music])
+    }, [])
 
     return (
         <div className='container'>
