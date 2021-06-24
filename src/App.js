@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect} from 'react'
 import NavigatorBar from './components/NavigatorBar/navigatorBar'
 import SearchBar from './components/SearchBar/searchBar'
 import MusicTableDetails from './components/MusicTableDetails/musicTableDetails';
-import { Link, Switch, Route } from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 
 
 // import Search from './components/simpleSearch/simpleSearch';
@@ -39,20 +39,26 @@ const App = () => {
     return (
         <div className='container'>
             <div className='header'>
-                <NavigatorBar />
+                <NavigatorBar/>
             </div>
 
             <div className='contents'>
 
-                <Switch>
-                    <Route exact path="/"><App /></Route>
-                    <Route path="/song-details"><MusicTableDetails /></Route>
-                </Switch>
 
+                <Switch>
+                    <Route exact path="/">
+                        <SearchBar music={music}
+                            searchBox={searchBox}
+                            handleSearchBoxChange={handleSearchBoxChange}
+                            handleSearchSubmit={handleSearchSubmit}/></Route>
+                    <Route path="/song-details"><MusicTableDetails/></Route>
+                </Switch>
+{/*
                 <SearchBar music={music}
                     searchBox={searchBox}
                     handleSearchBoxChange={handleSearchBoxChange}
-                    handleSearchSubmit={handleSearchSubmit} />
+                        handleSearchSubmit={handleSearchSubmit} />
+*/}
             </div>
 
             <div className='footer'></div>

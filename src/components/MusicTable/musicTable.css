@@ -30,3 +30,16 @@
  tr:nth-child(even) {
    background-color: #dddddd;
  }
+
+ .music-table button {
+   border-radius: 5px;
+   padding: 2px 10px;
+ }
+
+ .music-table button:hover {
+  font-weight: bold;
+ }
+
+ .music-table .action-button {
+   width:100px;
+ }

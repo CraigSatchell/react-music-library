@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './musicTable.css';
 //import { uniqueItem } from '../../helper'
 
 const MusicTable = (props) => {
 
    const tableRows = props.music.map((song) => {
-      return <tr key={song.id}><td><a href="/">{song.title}</a></td><td>{song.album}</td><td>{song.artist}</td><td>{song.genre}</td><td>{song.releaseDate}</td>
+      return <tr key={song.id}><td><Link to="/song-details">{song.title}</Link></td><td>{song.album}</td><td>{song.artist}</td><td>{song.genre}</td><td>{song.releaseDate}</td><td><button>&nbsp;Delete&nbsp;</button></td>
       </tr>
    })
 
@@ -15,7 +16,7 @@ const MusicTable = (props) => {
          <table>
             <thead>
                <tr>
-                  <th>Title</th><th>Album</th><th>Artist</th><th>Genre</th><th>Release Date</th>
+                  <th>Title</th><th>Album</th><th>Artist</th><th>Genre</th><th>Release Date</th><th>Action</th>
                </tr>
             </thead>
             <tbody>
