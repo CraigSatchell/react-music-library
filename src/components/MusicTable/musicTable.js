@@ -6,7 +6,7 @@ import './musicTable.css';
 const MusicTable = (props) => {
 
    const tableRows = props.music.map((song) => {
-      return <tr key={song.id}><td><Link to="/song-details">{song.title}</Link></td><td>{song.album}</td><td>{song.artist}</td><td>{song.genre}</td><td>{song.releaseDate}</td><td><button>&nbsp;Delete&nbsp;</button></td>
+      return <tr key={song.id}><td><Link to="/song-details">{song.title}</Link></td><td>{song.album}</td><td>{song.artist}</td><td>{song.genre}</td><td>{song.releaseDate}</td><td><button onClick={() => { props.handleDeleteSong(song.id) }}>&nbsp;Delete&nbsp;</button></td>
       </tr>
    })
 

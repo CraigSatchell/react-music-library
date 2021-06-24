@@ -27,14 +27,26 @@ const App = () => {
         setSearchBox(event.target.value)
     }
 
+    const handleDeleteSong = (id) => {
+        //alert(id);
+        // const newMusic = music.filter(song => song.id !== id);
+        // setMusic(newMusic);
+        deleteMusicData(id);
+    }
+
     // connect to localhost API backend on port 5000
     const getMusicData = () => {
         axios.get('http://localhost:5000/api/songs/').then((response) => setMusic(response.data))
     }
 
+    const deleteMusicData = (id) => {
+        axios.delete(`http://localhost:5000/api/songs/${id}`).then((response) => (response.data));
+        getMusicData();
+    }
+
     useEffect(() => {
         getMusicData()
-    }, [music])
+    }, [])
 
     return (
         <div className='container'>
@@ -50,7 +62,8 @@ const App = () => {
                         <SearchBar music={music}
                             searchBox={searchBox}
                             handleSearchBoxChange={handleSearchBoxChange}
-                            handleSearchSubmit={handleSearchSubmit}/></Route>
+                            handleSearchSubmit={handleSearchSubmit}
+                            handleDeleteSong={handleDeleteSong} /></Route>
                     <Route path="/song-details"><MusicTableDetails/></Route>
                 </Switch>
 {/*
