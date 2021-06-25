@@ -1,50 +1,103 @@
 .music-table {
-   margin: 75px 50px 100px 50px;
-   min-width: 575px;
-   border-radius: 7px;
-   border: 1px solid #999999;
-   box-shadow: 3px 3px 7px #999999;
+    margin: 10px 50px 100px 50px;
+    min-width: 575px;
+    border-radius: 7px;
+    border: 1px solid #999999;
+    box-shadow: 3px 3px 7px #999999;
 }
 
 .music-table h2 {
-  padding: 10px;
-  background-color: rgb(76, 21, 128);
-  color: #d2aada;
-  border-width: 3px;
-  border-radius: 7px 7px 0 0;
-
+    padding: 10px;
+    background-color: rgb(76, 21, 128);
+    color: #d2aada;
+    border-width: 3px;
+    border-radius: 7px 7px 0 0;
 }
 
-.music-table table {
-   font-family: arial, sans-serif;
-   border-collapse: collapse;
-   width: 100%;
- }
- 
- td, th {
-   border: 1px solid #dddddd;
-   text-align: left;
-   padding: 8px;
- }
- 
- tr:nth-child(even) {
-   background-color: #dddddd;
- }
+.music-table a:link {
+    color: rgb(76, 21, 128);
+}
 
- .music-table button {
-   border-radius: 5px;
-   padding: 3px 10px;
-   border-color: #666666;
- }
+.music-table a:hover {
+    font-weight: bold;
+    font-size: 1.1em;
+}
 
- .music-table button:hover {
-  font-weight: bold;
-  color: #d2aada;
-  background-color:rgb(76, 21, 128);
-  border: 2px solid #d2aada;
- }
+.music-table table,
+.add-song table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
- .music-table .action-button {
-   width:100px;
-   
- }
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.add-song {
+    margin: 100px 50px 0 50px;
+    min-width: 575px;
+}
+
+.add-song-form {
+    margin-top: 10px;
+    border: 3px solid #d2aada;
+    background-color: #f2f2f2;
+}
+
+.add-song-form input[type='text'] {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color:rgb(76, 21, 128);
+    height: 30px;
+    border-style: none;
+    background-color: #ffffff;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+.add-song-form input[type='text']:focus {
+    box-shadow: 3px 3px 10px #666666;
+}
+
+
+.collapsed {
+    visibility: collapse;
+}
+
+.music-table button,
+.add-song button,
+input[type='submit'] {
+    border-radius: 5px;
+    padding: 3px 10px;
+    border-color: #999999;
+}
+
+.add-song button,
+input[type='submit'] {
+    padding: 7px 15px;
+    min-width: 75px;
+}
+
+.music-table button:hover,
+.add-song button:hover,
+input[type='submit']:hover {
+    font-weight: bold;
+    color: #d2aada;
+    background-color: rgb(76, 21, 128);
+    border: 2px solid #d2aada;
+}
+
+.music-table .action-button {
+    width: 100px;
+}

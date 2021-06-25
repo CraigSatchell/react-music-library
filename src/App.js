@@ -14,6 +14,13 @@ import axios from 'axios'
 const App = () => {
     const [music, setMusic] = useState([])
     const [searchBox, setSearchBox] = useState('')
+    const [newSong, setNewSong] = useState({
+        title: '',
+        album: '',
+        artist: '',
+        genre: '',
+        releaseDate: ''
+    })
 
 
     // Handle search submit
@@ -28,10 +35,23 @@ const App = () => {
     }
 
     const handleDeleteSong = (id) => {
-        //alert(id);
+        // alert(id);
         // const newMusic = music.filter(song => song.id !== id);
         // setMusic(newMusic);
         deleteMusicData(id);
+    }
+
+
+    const handleAddSong = () => {
+        alert('Add Song');
+    }
+
+    const handleSongChange = (event) => {
+        setNewSong({
+            ...newSong,
+            [event.target.name]: event.target.value
+        })
+        console.log(event.target.value)
     }
 
     // connect to localhost API backend on port 5000
@@ -63,16 +83,18 @@ const App = () => {
                             searchBox={searchBox}
                             handleSearchBoxChange={handleSearchBoxChange}
                             handleSearchSubmit={handleSearchSubmit}
-                            handleDeleteSong={handleDeleteSong} /></Route>
+                            handleDeleteSong={handleDeleteSong}
+                            newSong={newSong}
+                            handleAddSong={handleAddSong}
+                            handleSongChange={handleSongChange}/></Route>
                     <Route path="/song-details"><MusicTableDetails/></Route>
                 </Switch>
-{/*
+                {/*
                 <SearchBar music={music}
                     searchBox={searchBox}
                     handleSearchBoxChange={handleSearchBoxChange}
                         handleSearchSubmit={handleSearchSubmit} />
-*/}
-            </div>
+*/} </div>
 
             <div className='footer'></div>
         </div>
