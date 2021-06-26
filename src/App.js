@@ -42,7 +42,7 @@ const App = () => {
     }
 
 
-    const handleAddSong = () => {
+    const handleAddSongSubmit = () => {
         alert('Add Song');
     }
 
@@ -85,7 +85,7 @@ const App = () => {
                             handleSearchSubmit={handleSearchSubmit}
                             handleDeleteSong={handleDeleteSong}
                             newSong={newSong}
-                            handleAddSong={handleAddSong}
+                            handleAddSongSubmit={handleAddSongSubmit}
                             handleSongChange={handleSongChange}/></Route>
                     <Route path="/song-details"><MusicTableDetails/></Route>
                 </Switch>

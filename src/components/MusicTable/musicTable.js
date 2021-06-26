@@ -15,16 +15,20 @@ const MusicTable = (props) => {
    return (
       <>
          <div className='add-song'>
-         <button onClick={handleAddNewSongClick}>Add New Song</button>
+            <button onClick={handleAddNewSongClick}>Add New Song</button>
             <div id='add-new-song' className='collapsed'>
-               <form className='add-song-form'>
+               <form className='add-song-form' onSubmit={
+                  (event) => {
+                     props.handleAddSongSubmit(event);
+                  }
+               }>
                   <table>
                      <tr>
                         <td><input type="text" name='title' placeholder="Title" /></td>
-                        <td><input type="text" name='album' placeholder="Album"  /></td>
-                        <td><input type="text" name='artist' placeholder="Artist"  /></td>
-                        <td><input type="text" name='genre' placeholder="Genre"  /></td>
-                        <td><input type="text" name='releaseDate' placeholder="Release Date"  /></td>
+                        <td><input type="text" name='album' placeholder="Album" /></td>
+                        <td><input type="text" name='artist' placeholder="Artist" /></td>
+                        <td><input type="text" name='genre' placeholder="Genre" /></td>
+                        <td><input type="text" name='releaseDate' placeholder="Release Date" /></td>
                         <td><input type="submit" value="Save" /></td>
                      </tr>
                   </table>

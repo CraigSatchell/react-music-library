@@ -71,9 +71,11 @@ tr:nth-child(even) {
     background-color: #ffffff;
 }
 
+
 .collapsed {
     visibility: collapse;
 }
+
 
 .music-table button,
 .add-song button,
