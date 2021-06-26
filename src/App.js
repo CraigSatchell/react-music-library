@@ -42,7 +42,8 @@ const App = () => {
     }
 
 
-    const handleAddSongSubmit = () => {
+    const handleAddSongSubmit = (event) => {
+        event.preventDefault();
         alert('Add Song');
     }
 

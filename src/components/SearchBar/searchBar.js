@@ -25,7 +25,7 @@ const SearchBar = (props) => {
                <input type="submit" value='Clear' />
             </form>
          </div>
-         <MusicTable music={filteredMusic} handleDeleteSong={props.handleDeleteSong}/>
+         <MusicTable music={filteredMusic} newSong={props.newSong} handleAddSongSubmit={props.handleAddSongSubmit} handleDeleteSong={props.handleDeleteSong}/>
       </>
    )
 }

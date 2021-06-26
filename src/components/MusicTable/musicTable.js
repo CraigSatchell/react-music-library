@@ -24,11 +24,11 @@ const MusicTable = (props) => {
                }>
                   <table>
                      <tr>
-                        <td><input type="text" name='title' placeholder="Title" /></td>
-                        <td><input type="text" name='album' placeholder="Album" /></td>
-                        <td><input type="text" name='artist' placeholder="Artist" /></td>
-                        <td><input type="text" name='genre' placeholder="Genre" /></td>
-                        <td><input type="text" name='releaseDate' placeholder="Release Date" /></td>
+                        <td><input type="text" name='title' placeholder="Title" value={props.newSong.title} /></td>
+                        <td><input type="text" name='album' placeholder="Album" value={props.newSong.album} /></td>
+                        <td><input type="text" name='artist' placeholder="Artist" value={props.newSong.artist} /></td>
+                        <td><input type="text" name='genre' placeholder="Genre" value={props.newSong.genre} /></td>
+                        <td><input type="text" name='releaseDate' placeholder="Release Date" value={props.newSong.releaseDate} /></td>
                         <td><input type="submit" value="Save" /></td>
                      </tr>
                   </table>
