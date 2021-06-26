@@ -8,24 +8,19 @@ const SearchBar = (props) => {
    return (
       <>
          <div className='search-bar'>
-            <form onSubmit={
-               (event) => {
-                  props.handleSearchSubmit(event)
-               }
+            <form onSubmit={(event) => {
+               props.handleSearchSubmit(event)
+            }
             }>
                <label htmlFor='search'></label>
                <input type='text' name='searchFor'
-                  onChange={
-                     props.handleSearchBoxChange
-                  }
-                  value={
-                     props.searchBox
-                  }
+                  onChange={props.handleSearchBoxChange}
+                  value={props.searchBox}
                   placeholder='Title, Album, Artist...'></input>
                <input type="submit" value='Clear' />
             </form>
          </div>
-         <MusicTable music={filteredMusic} newSong={props.newSong} handleAddSongSubmit={props.handleAddSongSubmit} handleDeleteSong={props.handleDeleteSong}/>
+         <MusicTable music={filteredMusic} newSong={props.newSong} handleAddSongSubmit={props.handleAddSongSubmit} handleDeleteSong={props.handleDeleteSong} />
       </>
    )
 }
