@@ -4,23 +4,22 @@ import NavigatorBar from './components/NavigatorBar/navigatorBar'
 import SearchBar from './components/SearchBar/searchBar'
 import MusicTableDetails from './components/MusicTableDetails/musicTableDetails';
 import { Switch, Route } from 'react-router-dom';
-
-
-// import Search from './components/simpleSearch/simpleSearch';
-
 import './App.css'
 import axios from 'axios'
 
+
 const App = () => {
-    const [music, setMusic] = useState([])
-    const [searchBox, setSearchBox] = useState('')
-    const [newSong, setNewSong] = useState({
+    const newSongInitialState = {
         title: '',
         album: '',
         artist: '',
         genre: '',
         releaseDate: ''
-    })
+    }
+
+    const [music, setMusic] = useState([]);
+    const [searchBox, setSearchBox] = useState('');
+    const [newSong, setNewSong] = useState(newSongInitialState);
 
 
     // Handle search submit
